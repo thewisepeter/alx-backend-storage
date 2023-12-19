@@ -2,6 +2,7 @@
 #this simplifies githubbing
 echo filename
 read varname
+chmod +x $varname
 git add .
 git commit -m "solution $varname"
 git push
