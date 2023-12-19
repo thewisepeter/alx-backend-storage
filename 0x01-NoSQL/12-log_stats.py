@@ -18,6 +18,10 @@
 '''
 
 
+import pymongo
+from pymongo import MongoClient
+
+
 def print_nginx_stats(nginx_logs):
     ''' function that gives stats about Nginx logs '''
     print(f"{nginx_logs.estimated_document_count()} logs")
