@@ -84,6 +84,7 @@ def replay(fn: Callable):
 
 
 class Cache:
+    ''' Create a cache class '''
     def __init__(self):
         '''
             Initialize Redis client and flush the database
