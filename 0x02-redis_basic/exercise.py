@@ -94,7 +94,9 @@ class Cache:
     @count_calls
     @call_history
     def store(self, data: Union[str, bytes, int, float]) -> str:
-        # Generate a random key using uuid
+        '''
+            Generate a random key using uuid
+        '''
         key = str(uuid.uuid4())
 
         # Store the data in Redis with the generated key
@@ -105,7 +107,9 @@ class Cache:
 
     def get(self, key: str,
             fn: Optional[callable] = None) -> Union[str, bytes, int, float]:
-        # convert the data back to the desired format
+        '''
+            convert the data back to the desired format
+        '''
         value = self._redis.get(key)
         if fn:
             value = fn(value)
