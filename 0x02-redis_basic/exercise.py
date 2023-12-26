@@ -20,7 +20,9 @@ from functools import wraps
 
 
 def count_calls(method: Callable) -> Callable:
-    # returns a Callable
+    '''
+        Decorator to count the number of calls to the decorated method
+    '''
     key = method.__qualname__
 
     @wraps(method)
